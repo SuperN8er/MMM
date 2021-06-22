@@ -1,4 +1,5 @@
 """Module for working with median"""
+from rand_data import get_rand_nums
 
 
 """
@@ -32,8 +33,33 @@ return median
 """
 
 
+def calc_median(nums):
+    """Calculate the mean, given a list of numbers"""
+
+    sorted_nums = sorted(nums)
+    print(sorted_nums)
+    length = len(sorted_nums)
+
+    if (length % 2) == 1:
+        # odd
+        midpoint = length // 2
+        median = sorted_nums[midpoint]
+    else:
+        # even
+        upper_index = length // 2
+        lower_index = upper_index - 1
+        lower_median = sorted_nums[lower_index]
+        upper_median = sorted_nums[upper_index]
+        median = (lower_median + upper_median) / 2
+
+    return median
+
+
 def main():
-    pass
+    # nums = get_rand_nums(9)
+    nums = get_rand_nums(10)
+    print(nums)
+    print(calc_median(nums))
 
 
 if __name__ == "__main__":
