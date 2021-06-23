@@ -2,26 +2,18 @@
 import random
 
 
-def get_rand_num(mini=30, maxi=60):
-    """Return a random number between mini and maxi
-
-    default mini 30 , maxi 60
-
-    """
-    return random.randint(mini, maxi)
-
-
 def get_rand_nums(loops):
     """Return a random list of numbers"""
     nums = []
     for loop in range(loops):
-        nums.append(get_rand_num())
+        rand_num = random.randint(30, 60)
+        nums.append(rand_num)
 
     return nums
 
 
 def main():
-    x = get_rand_nums(50)
+    x = get_rand_nums(25)
     print(x)
 
 
