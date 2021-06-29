@@ -2,11 +2,11 @@
 import random
 
 
-def get_rand_nums(loops):
+def get_rand_nums(loops, mini=30, maxi=60):
     """Return a random list of numbers"""
     nums = []
     for loop in range(loops):
-        rand_num = random.randint(30, 60)
+        rand_num = random.randint(mini, maxi)
         nums.append(rand_num)
 
     return nums
