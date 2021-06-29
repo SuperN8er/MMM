@@ -2,28 +2,6 @@
 from rand_data import get_rand_nums
 
 
-"""
-given a list of numbers
-calculate the mode of the list
-
-get unique list of numbers from given list
-
-********* GOAL FOR THE LOOP *************
-**collect pairs of unique numbers and their count**
-
-loop through unique numbers
-    find count of unique number in given list
-    pair the count with the unique number
-    append pair to collection
-
-sort the collection in reverse order
-get the first element in the collection
-then get the second element from the pair AKA the mode
-return mode
-
-"""
-
-
 def calc_mode(nums):
     """Calculate the mean, given a list of numbers"""
 
